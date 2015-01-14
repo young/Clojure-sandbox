@@ -109,3 +109,42 @@
 ; (= (__ [1 1 1 3]) '(1 1 1 3))
 
 
+filter odd?
+
+
+; Write a function which returns the first X fibonacci numbers.
+
+; (= (__ 3) '(1 1 2))
+
+; (= (__ 6) '(1 1 2 3 5 8))
+
+; (= (__ 8) '(1 1 2 3 5 8 13 21))
+
+#(take % (map (fn fib [n]
+   (if (or (= n 1) (= n 0))
+    n
+   (+ (fib (- n 1)) (fib(- n 2)))
+
+ )) (iterate inc 1))) 
+
+
+
+
+; Write a function which returns true if the given sequence is a palindrome.
+
+; Hint: "racecar" does not equal '(\r \a \c \e \c \a \r)
+
+; (false? (__ '(1 2 3 4 5)))
+
+
+; (true? (__ "racecar"))
+
+
+; (true? (__ [:foo :bar :foo]))
+
+
+; (true? (__ '(1 1 3 3 1 1)))
+
+
+; (false? (__ '(:a :b :c)))
+
