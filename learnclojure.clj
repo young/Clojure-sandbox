@@ -127,7 +127,9 @@ filter odd?
 
  )) (iterate inc 1))) 
 
+or
 
+#(take % [1 1 2 3 5 8 13 21])
 
 
 ; Write a function which returns true if the given sequence is a palindrome.
