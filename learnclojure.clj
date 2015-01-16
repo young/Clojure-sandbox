@@ -127,9 +127,16 @@ filter odd?
 
  )) (iterate inc 1))) 
 
-or
+; OR
 
-#(take % [1 1 2 3 5 8 13 21])
+(fn fib2 [y]
+  (letfn [(fib [x]
+  (if (< x 2)
+      1
+      (+ (fib (- x 2)) (fib (- x 1)))))]
+    (map fib (range y))
+  )
+)
 
 
 ; Write a function which returns true if the given sequence is a palindrome.
